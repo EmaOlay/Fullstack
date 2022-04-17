@@ -1,0 +1,371 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* FONTS */
+/* For my font */
+@font-face {
+    font-family: 'OverdoseSunrise';
+    src: url(../Fonts/OverdoseSunrise-egKg.ttf);
+}
+/* For google font */
+@font-face {
+    font-family: 'Seagram';
+    src: url(../Fonts/Seagram\ tfb.ttf);
+}
+
+@font-face {
+  font-family: 'Cloister Black';
+  src: url(../Fonts/CloisterBlack.ttf);
+}
+/* END FONTS */
+/* For video BG */
+#videoBG {
+    position: fixed;
+    z-index: -11;
+    top: 0;
+    left: 0;
+}
+
+/* Adjust for types of screens */
+@media(min-aspect-ratio: 16/9){
+    #videoBG{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media(max-aspect-ratio: 16/9){
+    #videoBG{
+        width: auto;
+        height: 100%;
+    }
+}
+
+/* adjust for mobile typicaly small pixel count */
+@media(max-width: 768px){
+    #videoBG{
+        display: none;
+    }
+    body{
+        background: url('../Images/bg_image.jpg');
+        background-size: auto;
+        background-repeat:repeat;
+        width: auto;
+        height: 100%;
+    }
+}
+
+/* END video BG */
+
+/*For general labels*/
+main{
+  text-align: center;
+  font-family: 'Seagram';
+  color: #E1E1B8;
+}
+h1{
+  align-content: center;
+  text-align: center;
+  font-weight: 400;
+  font-family: 'Cloister Black';
+  font-size: 5rem;
+  background-image: linear-gradient(0deg, #998A6F,#F96D5D, #FB5C4A);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+/*End for general labels*/
+
+/* Begin header nav */
+  #active:checked ~ .header-wrapper{
+    right:0;
+  }
+  .menu-btn{
+    position: fixed;
+    z-index: 9999;
+    right: 1.5rem;
+    top: 1.5rem;
+    height: 3.3rem;
+    width: 3.3rem;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-btn span,
+  .menu-btn:before,
+  .menu-btn:after{
+      content: "";
+      position: absolute;
+      top: calc(50% - 1px);
+      left: 30%;
+      width: 40%;
+      border-bottom: 2px solid #ffeba7;
+      transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  .menu-btn:before{
+    transform: translateY(-8px);
+  }
+  .menu-btn:after{
+    transform: translateY(8px);
+  }
+  
+  
+  .close {
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      transition: background .6s;
+  }
+  
+  /* closing animation */
+  #active:checked + .menu-btn span {
+      transform: scaleX(0);
+  }
+  #active:checked + .menu-btn:before {
+      transform: rotate(45deg);
+    border-color: #ffeba7;
+  }
+  #active:checked + .menu-btn:after {
+      transform: rotate(-45deg);
+    border-color: #ffeba7;
+  }
+  .header-wrapper ul{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    height: 90%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+  }
+  .header-wrapper ul li{
+    display: inline-flexbox;
+    height: 20%;
+    margin: 15px 0;
+  }
+  .header-wrapper ul li i{
+    margin-right: 0.5rem;
+  }
+  .header-wrapper ul li a{
+    font-family: 'Seagram';
+    color: #E1E1B8;
+  }
+  .header-wrapper ul li a:after{
+    position: absolute;
+    content: "";
+    background: #635a49;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 50px;
+    transform: scaleY(0);
+    z-index: -1;
+    transition: transform 0.3s ease;
+  }
+  .header-wrapper ul li a:hover:after{
+    transform: scaleY(1);
+  }
+  .header-wrapper ul li a:hover{
+    color: #FF6A59;
+  }
+  input[type="checkbox"]{
+    display: none;
+  }
+  .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    text-align: center;
+    width: 100%;
+    color: #202020;
+  }
+  
+  #active:checked ~ .header-wrapper ul li a{
+    opacity: 1;
+  }
+  .header-wrapper ul li a{
+    transition: opacity 1.2s, transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translateX(100px);
+  }
+  #active:checked ~ .header-wrapper ul li a{
+      transform: none;
+      transition-timing-function: ease, cubic-bezier(.1,1.3,.3,1); /* easeOutBackを緩めた感じ */
+     transition-delay: .6s;
+    transform: translateX(-100px);
+  }
+
+  @media(min-aspect-ratio: 16/9){
+    .header-wrapper{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 25vw;
+        z-index: 9998;
+        background-color: rgba(32, 32, 32,0.7);
+        backdrop-filter: blur(0.2em);
+        transition: all 0.6s ease-in-out;
+      }
+    .header-wrapper ul li a{
+        width: 70%;
+        letter-spacing: 0.13rem;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 500;
+        padding: 5px 0px 5px 0px;
+        border-radius: 50px;
+        position: absolute;
+        line-height: 50px;
+        margin: 15px 0px 5px 0px;
+        opacity: 0;
+        transition: all 0.3s ease;
+        transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+}
+@media(max-aspect-ratio: 16/9){
+    .header-wrapper{
+        position: fixed;
+        top: 0%;
+        right: -100%;
+        height: 100vh;
+        width: 100vw;
+        z-index: 9998;
+        background-color: rgba(32, 32, 32,0.7);
+        backdrop-filter: blur(1em);
+        transition: all 0.6s ease-in-out;
+    }
+    .header-wrapper ul li{
+      height: 20%;
+      /* width: 100vw; */
+    }
+    .header-wrapper ul li a{
+      /* width: 100%; */
+      letter-spacing: 0.13rem;
+      text-decoration: none;
+      font-size: 2rem;
+      font-weight: 500;
+      padding: 5px;
+      border-radius: 50px;
+      position: relative;
+      line-height: 50px;
+      margin: 5px 0px 5px 0px;
+      opacity: 0;
+      transition: all 0.3s ease;
+      transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    /* border: 2px solid red; */
+}
+/* END navbar */
+
+/* Footer */
+footer{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.footer_nav{
+	margin: 27px auto 0;
+	position: relative;
+	width: 50vw;
+	height: 3rem;
+	background-color: #635a49;
+	border-radius: 8px;
+	font-size: 0;
+  
+}
+
+.footer_nav a {
+	line-height: 50px;
+	height: 100%;
+	font-size: 15px;
+	display: inline-block;
+	position: relative;
+  outline: none;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+
+.footer_nav .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+    
+	z-index: 0;
+	transition: all .35s ease-in-out 0s;
+	border-radius: 8px;
+}
+a:nth-child(1) {
+	width: 10vw;
+}
+a:nth-child(2) {
+	width: 10vw;
+}
+a:nth-child(3) {
+	width: 10vw;
+}
+a:nth-child(4) {
+	width: 10vw;
+}
+a:nth-child(5) {
+	width: 10vw;
+}
+.footer_nav .start-home, a:nth-child(1):hover~.animation, a:nth-child(1):focus~.animation {
+	width: 10vw;
+	left: 0;
+	background-color: #FF6A59;
+  outline: none;
+}
+.footer_nav .start-about, a:nth-child(2):hover~.animation, a:nth-child(2):focus~.animation {
+	width: 10vw;
+	left: 10vw;
+	background-color: #5f3976;
+  outline: none;
+}
+.footer_nav .start-blog, a:nth-child(3):hover~.animation, a:nth-child(3):focus~.animation {
+	width: 10vw;
+	left: 20vw;
+	background-color: #FF6A59;
+  outline: none;
+}
+.footer_nav .start-portefolio, a:nth-child(4):hover~.animation, a:nth-child(4):focus~.animation {
+	width: 10vw;
+	left: 30vw;
+	background-color: #5f3976;
+  outline: none;
+}
+.footer_nav .start-contact, a:nth-child(5):hover~.animation, a:nth-child(5):focus~.animation {
+	width: 10vw;
+	left: 40vw;
+	background-color: #FF6A59;
+  outline: none;
+}
+
+.firma{
+  display: inline-block;
+    margin-top: 3rem;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    /* color: darkred; */
+    /* font-family: 'Seagram'; */
+    font-family: 'Cloister Black';
+    font-size: 2rem;
+    background-image: linear-gradient(0deg, #998A6F,#F96D5D, #FB5C4A);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+/* End Footer */

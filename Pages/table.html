@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./Images/favicon.gif" type="image/gif">
+    <!-- google font for footer -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <!-- My css file -->
+    <link rel="stylesheet" href="../Styles/General.css">
+    <link rel="stylesheet" href="../Styles/table.css">
+    <!-- To use fontawesome -->
+    <script src="https://kit.fontawesome.com/657d94f99b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <video id="videoBG" poster="./Images/bg_image.jpg" autoplay="" muted="" loop="" >
+        <source src="../Videos/bg_video.webm" type="video/webm">
+    </video>
+    <h1>Anime List</h1>
+    <header>
+        
+        <input type="checkbox" id="active">
+        <label for="active" class="menu-btn"><span></span></label>
+        <label for="active" class="close"></label>
+        <div class="header-wrapper">
+            <ul>
+                <li><a href="../Index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="./upload.html"><i class="fa-solid fa-upload"></i>Upload</a></li>
+                <li><a href="./yo.html"><i class="fa-solid fa-person"></i>Yo</a></li>
+                <li><a href="./parallax.html"><i class="fa-solid fa-scroll"></i>Parallax</a></li>
+                <li><a href="./table.html"><i class="fa-solid fa-table-list"></i>Table</a></li>
+            </ul>
+        </div>
+            
+    </header>
+
+    <main>
+        <div class="grid-wrapper">
+            <div class="table">
+                <div class="row header">
+                    <div class="cell">
+                        <span>Name</span> 
+                    </div>
+                    <div class="cell">
+                        <span>Last Read</span> 
+                    </div>
+                    <div class="cell">
+                        <span>URL</span> 
+                    </div>
+                    <div class="cell">
+                        <span>Genre</span> 
+                    </div>
+                </div>
+        
+                <div class="row">
+                    <div class="cell" data-title="Name">
+                        A Fairytale for the Demon Lord
+                    </div>
+                    <div class="cell" data-title="Last Read">
+                        56
+                    </div>
+                    <div class="cell" data-title="URL">
+                        <a href="https://mangakakalot.com/chapter/a_fairytale_for_the_demon_lord/chapter_56">MangaKakalot</a>
+                    </div>
+                    <div class="cell" data-title="Genre">
+                        Genero algo 0
+                    </div>
+                </div>
+        
+                <div class="row">
+                    <div class="cell" data-title="Name">
+                        Blue Lock
+                    </div>
+                    <div class="cell" data-title="Last Read">
+                        154
+                    </div>
+                    <div class="cell" data-title="URL">
+                        <a href="https://blue-lock.online/manga/blue-lock-chapter-154/">blue-lock.online</a>
+                    </div>
+                    <div class="cell" data-title="Genre">
+                        Genero algo algo 1
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <nav class="footer_nav">
+            <a rel="noreferrer noopener" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
+            <a rel="noreferrer noopener" href="https://github.com/EmaOlay" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a rel="noreferrer noopener" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a rel="noreferrer noopener" href="https://www.linkedin.com/in/emanuel-olay-0069b91b7/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:olayemanuel@gmail.com?subject=Prueba&body=Esto es una prueba"><i class="fa-solid fa-at"></i></a>
+            <div class="animation start-home"></div>
+        </nav>
+        
+        <p class="firma">Autor: Olay Emanuel</p>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,87 @@
+/* For parallax */
+#html_parallax{
+    height: 100vh;
+    overflow: hidden;
+}
+#body_parallax{
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#header_parallax{
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 30vw 0 5vw;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+}
+#header_parallax h1{
+    margin-top: -100px;
+}
+#header_parallax, #header_parallax:before{
+    background-size: cover;
+    z-index: -3;
+}
+#header_parallax::before{
+    bottom: 0vh;
+    content: "";
+    left: -1vh;
+    position: absolute;
+    right: 0vh;
+    top: -8vh;
+    display: block;
+    background-image: url(../Images/white_mountain.jpg);
+    background-size: cover;
+    transform-origin: center center 0;
+    /*escala: 1+((z transform * -1)/perpectiva inicial)*/
+    transform: translateZ(-1px) scale(2);
+    min-height: 100vh;
+}
+.main_div_parallax:nth-of-type(1){
+    content: "";
+    left: -1vh;
+    position: absolute;
+    top: 200vh;
+    display: block;
+    width: 100vw;
+    background-image: url(../Images/red_mountain.jpg);
+    background-size: cover;
+    transform-origin: center center 0;
+    /*escala: 1+((z transform * -1)/perpectiva inicial)*/
+    transform: translateZ(-2px) scale(3);
+    z-index: -4;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    text-align: center;
+
+}
+.main_div_parallax:nth-of-type(2){
+    content: "";
+    left: -1vh;
+    position: absolute;
+    top: 500vh;
+    display: block;
+    width: 100vw;
+    background-image: url(../Images/green-mountain.jpg);
+    background-size: cover;
+    transform-origin: center center 0;
+    /*escala: 1+((z transform * -1)/perpectiva inicial)*/
+    transform: translateZ(-3px) scale(4);
+    z-index: -5;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    text-align: center;
+}
+#header_parallax *{
+    font-family: 'Sofia';
+}
+.main_div_parallax {
+    font-family: 'Sofia';
+}
+/* End For parallax */
