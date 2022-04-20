@@ -154,7 +154,7 @@ h1{
     cursor: pointer;
     /* background-color: rgba(249, 109, 93, 0.7); */
     transition: all 0.3s ease-in-out;
-    transform: translate3d(0,0,0);
+    
   }
   .menu-btn span,
   .menu-btn:before,
