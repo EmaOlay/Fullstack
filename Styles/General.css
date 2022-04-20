@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: none;
 }
 /* FONTS */
 /* For my font */
@@ -20,6 +21,38 @@
   src: url(../Fonts/CloisterBlack.ttf);
 }
 /* END FONTS */
+
+/*For cursor*/
+#custom_cursor{
+  position: absolute;
+  /*size*/
+  width: 2rem;
+  height: 2rem;
+  /*border pattern*/
+  border: 1px dashed #998A6F;
+  box-sizing: border-box;
+  transition:ease 0.0s;
+  /*centramos*/
+  left: -1rem;
+  top: -1rem;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+}
+#cursor{
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  box-sizing: border-box;
+  transition:ease 0.0s;
+  background-color: red;
+  left: -2px;
+  top: -2px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+}
+/*END CURSOR*/
 /* For video BG */
 #videoBG {
     position: fixed;
