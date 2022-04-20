@@ -136,6 +136,7 @@ h1{
 /*End for general labels*/
 
 /* Begin header nav */
+
   #active:checked ~ .header-wrapper{
     right:0;
   }
@@ -151,7 +152,9 @@ h1{
     border-radius: 50%;
     font-size: 20px;
     cursor: pointer;
+    /* background-color: rgba(249, 109, 93, 0.7); */
     transition: all 0.3s ease-in-out;
+    transform: translate3d(0,0,0);
   }
   .menu-btn span,
   .menu-btn:before,
