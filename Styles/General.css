@@ -2,8 +2,32 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none;
+    cursor: none; 
 }
+/*For scrollbar*/
+/*Escondo la que viene por defecto*/
+::-webkit-scrollbar{
+  width: 0px;
+}
+#scroll_path{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100vh;
+  background: rgba(153, 138, 111, 0.05);
+}
+#progressbar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 0vh;
+  background: linear-gradient(to top, #998A6F,#F96D5D, #FB5C4A);
+  transition: 0.2s;
+  /* animation: animate 5s linear infinite; */
+}
+/*End scrollbar*/
 /* FONTS */
 /* For my font */
 @font-face {
@@ -24,7 +48,7 @@
 
 /*For cursor*/
 #custom_cursor{
-  position: absolute;
+  position: fixed;
   /*size*/
   width: 2rem;
   height: 2rem;
@@ -40,7 +64,7 @@
   z-index: 9999;
 }
 #cursor{
-  position: absolute;
+  position: fixed;
   width: 4px;
   height: 4px;
   box-sizing: border-box;
