@@ -152,9 +152,7 @@ h1{
     border-radius: 50%;
     font-size: 20px;
     cursor: pointer;
-    background-color: rgba(243, 66, 19, 0.7);
-    /* background-color: rgba(95, 57, 118, 0.7); */
-    /* background-color: rgba(249, 109, 93, 0.7); */
+    background-color: rgba(190, 166, 161, 0.8);
     transition: transform 0.15s linear;
     
   }
