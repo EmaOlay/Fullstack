@@ -5,6 +5,7 @@
   --red: rgba(234, 97, 83, 1);
   --violet: rgba(95, 57, 118, 1);
   --white: rgba(248, 255, 229, 1);
+  --sentido:alternate;
 }
 /*violeta-blanco
 rojo-blanco*/
@@ -64,23 +65,25 @@ rojo-blanco*/
   background-repeat: no-repeat;
   opacity: 1;
   background-image: linear-gradient(45deg,var(--white) 40%,var(--violet) 40%), linear-gradient(-45deg,var(--white) 40%,var(--violet) 40%);
+  transition: 1s linear;
+  
+}
+.img_grid_li:hover::after{
+  
+  animation: path 0.3s linear;
+  animation-direction: var(--sentido);
+  animation-fill-mode: forwards;
+  
+  
 }
 
-/* .img_grid_li:nth-child(2n)::before{
-  background-image: linear-gradient(-45deg,var(--pink) 53.5%,var(--red) 53.5%,var(--red) 60%,var(--pink) 60%), linear-gradient(45deg,var(--pink) 53.5%,var(--red) 53.5%,var(--red) 60%,var(--pink) 60%);
+@keyframes path {
+  0% { clip-path: url(#bordermask_lower); }
+  40% {clip-path: polygon(0 50%, 50% 50%, 50% 50%, 50% 50%, 100% 50%, 50% 100%); }
+  60% {clip-path: polygon(0 50%, 40% 50%, 50% 60%, 60% 50%, 100% 50%, 50% 100%); }
+  80% {clip-path: polygon(0 50%, 30% 50%, 50% 70%, 70% 50%, 100% 50%, 50% 100%); }
+  100% { clip-path: polygon(0% 50%, 20% 50%, 50% 80%, 80% 50%, 100% 50%, 50% 100%); }
 }
-
-.img_grid_li:nth-child(2n)::after{
-  background-image: linear-gradient(45deg,var(--white) 40%,var(--red) 40%), linear-gradient(-45deg,var(--white) 40%,var(--red) 40%);
-} */
-
-/* .img_grid_li:nth-child(5n)::before{
-  background-image: linear-gradient(-45deg,var(--violet) 53.5%,var(--white) 53.5%,var(--white) 60%,var(--violet) 60%), linear-gradient(45deg,var(--violet) 53.5%,var(--pink) 53.5%,var(--pink) 60%,var(--violet) 60%);
-}
-
-.img_grid_li:nth-child(5n)::after{
-  background-image: linear-gradient(45deg,var(--violet) 40%,var(--white) 40%), linear-gradient(-45deg,var(--violet) 40%,var(--white) 40%);
-} */
 
 .img_grid_li:nth-child(2n)::before,.img_grid_li:nth-child(2n)::before{
   background-image: linear-gradient(-45deg,var(--red) 53.5%,var(--white) 53.5%,var(--white) 60%,var(--red) 60%), linear-gradient(45deg,var(--red) 53.5%,var(--white) 53.5%,var(--white) 60%,var(--red) 60%);
