@@ -17,7 +17,7 @@ rojo-blanco*/
 .img_grid_ul{
   display:grid;
   position: relative;
-  padding-top: 25vh;
+  padding-top: 30vh;
   grid-template-columns: repeat(var(--columns),1fr);
   list-style: none;
   gap:10px;
@@ -123,6 +123,9 @@ img:hover{
   :root {
     --columns: 5;
   }
+  .img_grid_ul{
+    padding-top: 30vh;
+  }
   .img_grid_li:nth-child(2n){
     grid-column-start:auto;
   }
@@ -133,6 +136,9 @@ img:hover{
 @media (min-width:900px){
   :root {
     --columns: 7;
+  }
+  .img_grid_ul{
+    padding-top: 30vh;
   }
   .img_grid_li:nth-child(4n-1){
     grid-column-start:auto;
@@ -145,6 +151,9 @@ img:hover{
   :root {
     --columns: 9;
   }
+  .img_grid_ul{
+    padding-top: 30vh;
+  }
   .img_grid_li:nth-child(6n-2){
     grid-column-start:auto;
   }
@@ -156,6 +165,9 @@ img:hover{
   :root {
     --columns: 11;
   }
+  .img_grid_ul{
+    padding-top: 30vh;
+  }
   .img_grid_li:nth-child(8n-3){
     grid-column-start:auto;
   }
@@ -166,6 +178,9 @@ img:hover{
 @media (min-width:1800px){
   :root {
     --columns: 13;
+  }
+  .img_grid_ul{
+    padding-top: 25vh;
   }
   .img_grid_li:nth-child(10n-4){
     grid-column-start:auto;

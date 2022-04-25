@@ -1,5 +1,6 @@
 let cursor = document.getElementById('cursor');
 let custom_cursor = document.getElementById('custom_cursor');
+
 document.addEventListener('mousemove', function(e){
     let x = e.clientX;
     let y = e.clientY;
