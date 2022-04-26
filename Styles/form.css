@@ -1,20 +1,17 @@
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
-body {
-	background: #f6f5f7;
+
+main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	font-family: 'Montserrat', sans-serif;
-	height: 100vh;
+	height: 60vh;
 	margin: -20px 0 50px;
-}
+} 
 
 h1 {
-	font-weight: bold;
-	margin: 0;
+	margin-bottom: 3%;
 }
 
 h2 {
@@ -22,7 +19,6 @@ h2 {
 }
 
 p {
-	font-size: 14px;
 	font-weight: 100;
 	line-height: 20px;
 	letter-spacing: 0.5px;
@@ -31,13 +27,6 @@ p {
 
 span {
 	font-size: 12px;
-}
-
-a {
-	color: #333;
-	font-size: 14px;
-	text-decoration: none;
-	margin: 15px 0;
 }
 
 button {
@@ -110,6 +99,9 @@ input {
 	z-index: 2;
 }
 
+/*Animacion*/
+/*Cuando el boton se activa y le agrega la clase .right-panel-active
+lo muevo*/
 .container.right-panel-active .sign-in-container {
 	transform: translateX(100%);
 }
@@ -120,7 +112,8 @@ input {
 	opacity: 0;
 	z-index: 1;
 }
-
+/*Como me activaron el panel muestro el sing-up
+hago el cambio de opacidad y lo traigo al frente */
 .container.right-panel-active .sign-up-container {
 	transform: translateX(100%);
 	opacity: 1;
@@ -150,15 +143,15 @@ input {
 	transition: transform 0.6s ease-in-out;
 	z-index: 100;
 }
-
+/*Cuando se agrega la clase .right-panel-active muevo el overlay a la izqueirda*/
 .container.right-panel-active .overlay-container{
 	transform: translateX(-100%);
 }
 
 .overlay {
 	background: #FF416C;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background: -webkit-linear-gradient(90deg, #998A6F,#F96D5D, #FB5C4A);
+	background: linear-gradient(90deg, #998A6F,#F96D5D, #FB5C4A);;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -170,7 +163,7 @@ input {
   	transform: translateX(0);
 	transition: transform 0.6s ease-in-out;
 }
-
+/*traigo la posibilidad del sing in*/
 .container.right-panel-active .overlay {
   	transform: translateX(50%);
 }
@@ -193,7 +186,7 @@ input {
 .overlay-left {
 	transform: translateX(-20%);
 }
-
+/*alineo el texto del overlay left*/
 .container.right-panel-active .overlay-left {
 	transform: translateX(0);
 }
@@ -202,10 +195,11 @@ input {
 	right: 0;
 	transform: translateX(0);
 }
-
+/*le hago el efecto de salida al overlay right*/
 .container.right-panel-active .overlay-right {
 	transform: translateX(20%);
 }
+
 
 .social-container {
 	margin: 20px 0;
@@ -220,29 +214,15 @@ input {
 	margin: 0 5px;
 	height: 40px;
 	width: 40px;
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
 }
 
-footer {
-    background-color: #222;
-    color: #fff;
-    font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 999;
-}
-
-footer p {
-    margin: 10px 0;
-}
-
-footer i {
-    color: red;
-}
-
-footer a {
-    color: #3c97bf;
-    text-decoration: none;
+.fupass {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
 }
