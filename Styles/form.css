@@ -15,6 +15,7 @@ h1 {
 }
 
 h2 {
+	margin-top: -20%;
 	text-align: center;
 }
 
@@ -25,16 +26,15 @@ p {
 	margin: 20px 0 30px;
 }
 
-span {
+/* span {
 	font-size: 12px;
-}
+} */
 
 button {
 	border-radius: 20px;
 	border: 1px solid #FF4B2B;
 	background-color: #FF4B2B;
-	color: #FFFFFF;
-	font-size: 12px;
+	color: rgba(99, 90, 73, 1);
 	font-weight: bold;
 	padding: 12px 45px;
 	letter-spacing: 1px;
@@ -56,7 +56,7 @@ button.ghost {
 }
 
 form {
-	background-color: #FFFFFF;
+	background-color: rgba(99, 90, 73, 1);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -75,7 +75,7 @@ input {
 }
 
 .container {
-	background-color: #fff;
+	background-color: rgba(99, 90, 73, 1);
 	border-radius: 10px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
 			0 10px 10px rgba(0,0,0,0.22);
@@ -155,7 +155,7 @@ hago el cambio de opacidad y lo traigo al frente */
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
-	color: #FFFFFF;
+	color: rgba(99, 90, 73, 1);
 	position: relative;
 	left: -100%;
 	height: 100%;
@@ -214,15 +214,13 @@ hago el cambio de opacidad y lo traigo al frente */
 	margin: 0 5px;
 	height: 40px;
 	width: 40px;
-	color: #333;
-	font-size: 14px;
+	color: white;
 	text-decoration: none;
 	margin: 15px 0;
 }
 
 .fupass {
-	color: #333;
-	font-size: 14px;
+	color: white;
 	text-decoration: none;
 	margin: 15px 0;
 }
