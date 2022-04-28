@@ -71,6 +71,19 @@ input {
 	width: 100%;
 }
 
+@media(min-aspect-ratio: 16/9){
+    .container{
+		width:60%;
+	}
+}
+
+@media(max-aspect-ratio: 16/9){
+    .container{
+		width:100%;
+	}
+}
+
+
 .container {
 	background-color: rgba(99, 90, 73, 1);
 	border-radius: 10px;
@@ -78,7 +91,6 @@ input {
 			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
-	width: 768px;
 	max-width: 100%;
 	min-height: 480px;
 }
