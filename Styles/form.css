@@ -23,9 +23,6 @@ p {
 	margin: 20px 0 30px;
 }
 
-/* span {
-	font-size: 12px;
-} */
 
 button {
 	border-radius: 20px;
@@ -94,7 +91,12 @@ input {
 	max-width: 100%;
 	min-height: 480px;
 }
-
+@media(min-width: 2100px){
+    .container{
+		height: 80vh;
+		font-size: 1.6rem;
+	}	
+}
 .form-container {
 	position: absolute;
 	top: 0;

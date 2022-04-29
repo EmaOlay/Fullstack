@@ -152,7 +152,7 @@ img:hover{
     --columns: 9;
   }
   .img_grid_ul{
-    padding-top: 30vh;
+    padding-top: 20vh;
   }
   .img_grid_li:nth-child(6n-2){
     grid-column-start:auto;
@@ -166,7 +166,7 @@ img:hover{
     --columns: 11;
   }
   .img_grid_ul{
-    padding-top: 30vh;
+    padding-top: 25vh;
   }
   .img_grid_li:nth-child(8n-3){
     grid-column-start:auto;
@@ -180,7 +180,7 @@ img:hover{
     --columns: 13;
   }
   .img_grid_ul{
-    padding-top: 25vh;
+    padding-top: 20vh;
   }
   .img_grid_li:nth-child(10n-4){
     grid-column-start:auto;
@@ -192,6 +192,9 @@ img:hover{
 @media (min-width:2100px){
   :root {
     --columns: 15;
+  }
+  .img_grid_ul{
+    padding-top: 15vh;
   }
   .img_grid_li:nth-child(12n-5){
     grid-column-start:auto;
