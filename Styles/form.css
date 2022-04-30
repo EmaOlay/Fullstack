@@ -34,6 +34,7 @@ button {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
+	margin-top: 1vh;
 }
 
 button:active {
@@ -200,7 +201,7 @@ hago el cambio de opacidad y lo traigo al frente */
 
 
 .social-container {
-	margin: 20px 0;
+	margin: 0px 0;
 }
 
 .social-container a {
@@ -244,6 +245,10 @@ hago el cambio de opacidad y lo traigo al frente */
 		height: 80vh;
 		font-size: 1.6rem;
 	}	
+	h2 {
+		margin-bottom: 10%;
+		text-align: center;
+	}
 }
 
 @media(min-aspect-ratio: 16/9){
