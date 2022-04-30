@@ -68,17 +68,7 @@ input {
 	width: 100%;
 }
 
-@media(min-aspect-ratio: 16/9){
-    .container{
-		width:60%;
-	}
-}
 
-@media(max-aspect-ratio: 16/9){
-    .container{
-		width:100%;
-	}
-}
 
 
 .container {
@@ -91,12 +81,7 @@ input {
 	max-width: 100%;
 	min-height: 480px;
 }
-@media(min-width: 2100px){
-    .container{
-		height: 80vh;
-		font-size: 1.6rem;
-	}	
-}
+
 .form-container {
 	position: absolute;
 	top: 0;
@@ -234,4 +219,34 @@ hago el cambio de opacidad y lo traigo al frente */
 	color: white;
 	text-decoration: none;
 	margin: 15px 0;
+}
+
+@media(max-width: 600px){
+	.container{
+		height: 50vh;
+	}
+	.social-container {
+		margin: 20px 0;
+		width: 200%;
+	}
+
+}
+
+@media(min-width: 2100px){
+    .container{
+		height: 80vh;
+		font-size: 1.6rem;
+	}	
+}
+
+@media(min-aspect-ratio: 16/9){
+    .container{
+		width:60%;
+	}
+}
+
+@media(max-aspect-ratio: 16/9){
+    .container{
+		width:100%;
+	}
 }
