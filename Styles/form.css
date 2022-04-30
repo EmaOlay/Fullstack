@@ -229,7 +229,9 @@ hago el cambio de opacidad y lo traigo al frente */
 		margin: 20px 0;
 		width: 200%;
 	}
-
+	h1{
+		width: 80%;
+	}
 }
 
 @media(min-width: 2100px){
