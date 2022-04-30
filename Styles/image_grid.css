@@ -138,7 +138,7 @@ img:hover{
     --columns: 7;
   }
   .img_grid_ul{
-    padding-top: 30vh;
+    padding-top: 12vh;
   }
   .img_grid_li:nth-child(4n-1){
     grid-column-start:auto;
