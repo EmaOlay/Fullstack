@@ -77,6 +77,14 @@
   pointer-events: none;
   z-index: 9999;
 }
+@media(max-width: 600px){
+  #custom_cursor{
+    display: none;
+  }
+  #cursor{
+    display: none;
+  }
+}
 /*END CURSOR*/
 /* For video BG */
 #videoBG {
