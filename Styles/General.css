@@ -84,6 +84,9 @@
   #cursor{
     display: none;
   }
+  *{
+    cursor:default; 
+}
 }
 /*END CURSOR*/
 /* For video BG */
