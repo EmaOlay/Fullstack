@@ -14,6 +14,7 @@ h1 {
 h2 {
 	padding-top: -20%;
 	text-align: center;
+	letter-spacing: 0.1rem;
 }
 
 p {
@@ -71,8 +72,33 @@ input {
 	width: 100%;
 }
 
+.form-control small{
+	visibility: hidden;
+}
 
+.form-control.success input{
+	border: 4px solid;
+	border-color: rgba(95, 57, 118, 1);
+	
+}
+.form-control.success i.fa-circle-check{
+	visibility: visible;
+	color: rgba(95, 57, 118, 1);
+}
 
+.form-control.error input{
+	border: 4px solid;
+	border-color: rgba(234, 97, 83, 1);
+	
+}
+.form-control.error i.fa-circle-exclamation{
+	visibility: visible;
+	color: rgba(234, 97, 83, 1);
+}
+.form-control.error small{
+	visibility: visible;
+	color: rgba(234, 97, 83, 1);
+}
 
 .container {
 	background-color: rgba(99, 90, 73, 1);
@@ -83,6 +109,7 @@ input {
 	overflow: hidden;
 	max-width: 100%;
 	min-height: 480px;
+	min-height: 60vh;
 }
 
 .form-container {
@@ -224,6 +251,17 @@ hago el cambio de opacidad y lo traigo al frente */
 	margin: 15px 0;
 }
 
+.form-control{
+	position: relative;
+}
+.form-control i{
+	visibility: hidden;
+	/* color: #FF6A59; */
+	position: absolute;
+	top: 1.1rem;
+	right: 0.4rem;
+}
+
 @media(max-width: 600px){
 	.container{
 		height: 50vh;
@@ -249,9 +287,16 @@ hago el cambio de opacidad y lo traigo al frente */
 		margin-bottom: 10%;
 		text-align: center;
 	}
+	.social-container{
+		margin-top: -1.2rem;
+		padding-bottom: 2rem;
+	}
 	.social-container a {
 		height: 4rem;
 		width: 4rem;
+	}
+	input{
+		height: 3rem;
 	}
 }
 
