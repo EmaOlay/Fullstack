@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+main{
+  margin-bottom: 2vh;
+}
+
 .contenedor_form{
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -20,19 +24,34 @@
 
 
 .formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   grid-area: form;
   font-size: 2rem;
+  background-color: rgba(99, 90, 73,1);
+  border-radius: 5px;
+  height: 35vh;
 }
+
 .imagen_form{
   /* background-color: steelblue; */
   grid-area: img;
 }
 
 .imagen_form img{
-  height: 100%;
+  height: 90%;
 }
 
 .parrafo_random{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  padding-bottom: 5%;
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 30% 75%, 10% 100%, 10% 75%, 0% 75%);
   background-color: rgba(99, 90, 73,0.5);
   border-radius: 10px;
@@ -49,8 +68,13 @@
   color: rgb(225, 225, 184);
   font-size: 1.5rem;
   border-radius: 10px;
-  width: 80%;
+  border: none;
+  margin: 5px 10px;
+  /*Son 6 letras de 1.5 y quiero un 15% a cada lado*/
+  min-width: 12rem;
   background-color: rgba(234, 97, 83, 0.5);
+   /* offset-x | offset-y | blur-radius | color */
+   box-shadow: 3px 3px 4px 2px rgba(50, 50, 50, 1); 
 }
 
   form > div {
@@ -61,13 +85,13 @@
   }
   form > div > label,
   legend {
-      width: 25%;
+      width: 100%;
     float: left;
     padding-right: 10px;
   }
   form > div > div,
   form > div > fieldset > div {
-    width: 75%;
+    width: 100%;
     float: right;
   }
 
@@ -78,26 +102,23 @@
   
   
   input[type=text],
-  input[type=email],
   input[type=url],
-  input[type=number],
-  #Field106 {
+  input[type=number]{
     width: 60%;
     background-color: rgba(234, 97, 83, 0.5);
     line-height: 3rem;
     font-size: 1.8rem;
     color: rgb(225, 225, 184);
-    /* offset-x | offset-y | blur-radius | spread-radius | color */
-    /* box-shadow: 2px 2px 2px 1px rgba(255, 255, 255, 0.6); */
     border: none;
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: 3px 3px 4px 2px rgba(50, 50, 50, 1); 
     border-radius: 5px;
+    margin-bottom: 5px;
   }
   input[type=text]:focus,
-  input[type=email]:focus,
   input[type=url]:focus,
   input[type=number],
-  textarea:focus,
-  #Field106:focus {
+  textarea:focus{
     outline: 0;    
   }
   
@@ -117,12 +138,11 @@
       float: none;
     }
     input[type=text],
-    input[type=email],
     input[type=url],
     input[type=password],
     textarea,
     select {
-      width: 100%; 
+      width: 100%;
     }
   }
 
@@ -132,35 +152,66 @@
     }
   }
 
+  @media (min-width: 2100px){
+    .formulario{
+      padding-top: 10%;
+      padding-bottom: 10%;
+    }
+    .parrafo_random{
+      top: -40%;
+      height: 13vh;
+      font-size: 2.5rem;
+    }
+    .imagen_form img{
+      height: 95%;
+    }
+  }
   /*Portrait*/
 @media(max-aspect-ratio: 16/9){
   .contenedor_form{
     grid-template-columns: repeat(2,1fr);
-    grid-template-rows: 10rem 1fr 1fr;
+    grid-template-rows: repeat(3,1fr);
     grid-template-areas: "img diag "
                         " img diag "
                         " form form";
     width: 85vw;
-    margin-left: 10%;
-    margin-bottom: 15vh;
+    margin-top: -10vh;
+    margin-left: 5vh;
   }
 
   .parrafo_random{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
     clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 30% 75%, 10% 100%, 10% 75%, 0% 75%);
-    background-color: rgba(84, 70, 44, 0.5);
+    background-color: rgba(60, 54, 44, 0.5);
     border-radius: 10px;
-    opacity: 1;
-    font-size: 2rem;
-    grid-area: diag;
     color: rgb(225, 225, 184);
-    height: 80%;
-    line-height: 3rem;
+    height: 50%;
+    padding-bottom: 10%;
     }
   .imagen_form{
-    height: 150%;
+    height: 125%;
   }
   .formulario {
+    height: 20vh;
     font-size: 2rem;
-    margin-top: 20%;
   }
+}
+
+@media(max-aspect-ratio: 16/9) and (max-width:600px){
+  .contenedor_form{
+    height: 80vh;
+    font-size: 1rem;
+  }
+  .formulario {
+    height: 30vh;
+  }
+  .parrafo_random{
+    height: 100%;
+    font-size: 1.5rem;
+    padding-bottom: 5rem;
+    }
 }

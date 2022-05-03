@@ -8,7 +8,7 @@ class Manga {
         this.Last_read = l_read;
     }
     getInfo(){
-        console.log(this.Title + this.Last_read);
+        console.log(this.Title+ ' ' + this.Last_read);
     }
 }
 
@@ -190,11 +190,12 @@ let Libreria = new library;
 for (let i = 0; i < vec_title.length; i++) {
     Libreria.newManga(vec_title[i],vec_l_read[i]);
 }
+/*
 for (let index = 0; index < Libreria.getAllMangas().length; index++) {
     console.log('Titulo=' + Libreria.Mangas[index].Title);
     console.log('Last_read=' + Libreria.Mangas[index].Last_read);
     
-}
+}*/
 
 const manga = document.getElementById("manga");
 const l_read = document.getElementById("l_read");
