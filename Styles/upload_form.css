@@ -3,6 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* //No pega con nada
+@keyframes hue_effect {
+  0% { filter:hue-rotate(0deg); }
+  20% { filter:hue-rotate(72deg); }
+  40% { filter:hue-rotate(144deg); }
+  60% { filter:hue-rotate(216deg); }
+  80% { filter:hue-rotate(288deg); }
+  100% { filter:hue-rotate(360deg); }
+}*/
 
 main{
   margin-bottom: 2vh;
@@ -79,7 +88,6 @@ main{
 
   form > div {
     clear: both;
-    overflow: hidden;
     padding: 1px;
     margin: 0 0 10px 0;
   }
@@ -99,29 +107,25 @@ main{
       border: 0;
     padding: 0;
   }
-  
-  
-  input[type=text],
-  input[type=url],
-  input[type=number]{
+
+#manga,#l_read {
     width: 60%;
     background-color: rgba(234, 97, 83, 0.5);
     line-height: 3rem;
     font-size: 1.8rem;
     color: rgb(225, 225, 184);
     border: none;
-    /* offset-x | offset-y | blur-radius | color */
     box-shadow: 3px 3px 4px 2px rgba(50, 50, 50, 1); 
     border-radius: 5px;
+    margin-top: 10px;
     margin-bottom: 5px;
-  }
-  input[type=text]:focus,
-  input[type=url]:focus,
-  input[type=number],
-  textarea:focus{
-    outline: 0;    
-  }
-  
+    transition: width 0.3s ease-in-out;
+}
+#manga:focus,#l_read:focus {
+  width: 100%;
+  border: 2px solid rgba(255, 146, 77, 1);
+  outline: none;
+}
   @media (max-width: 600px) {
     form > div {
       margin: 0 0 15px 0; 
