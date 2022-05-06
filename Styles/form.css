@@ -264,6 +264,7 @@ hago el cambio de opacidad y lo traigo al frente */
 	right: 0.4rem;
 }
 
+
 @media(max-width: 600px){
 	.container{
 		height: 50vh;
