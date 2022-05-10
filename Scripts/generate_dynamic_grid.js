@@ -50,7 +50,7 @@ function carga_imagenes(){
                 chain+= `<li class="img_grid_li"><img class="img_grid" src="./Images/covers/`+vec[i]+`" alt=""></li>`;
                 //console.log(chain);
             }
-            //lo imprimo
+            //lo ingreso al html
             let img_grid_ul =document.getElementsByClassName('img_grid_ul');
             img_grid_ul[0].innerHTML= chain;
         }
