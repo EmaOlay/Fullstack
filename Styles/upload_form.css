@@ -75,12 +75,12 @@ main{
 #saveForm{
   font-family: 'Seagram';
   color: rgb(225, 225, 184);
-  font-size: 1.5rem;
+  font-size: 2vh;
   border-radius: 10px;
   border: none;
   margin: 5px 10px;
   /*Son 6 letras de 1.5 y quiero un 15% a cada lado*/
-  min-width: 12rem;
+  min-width: 10vw;
   background-color: rgba(234, 97, 83, 0.5);
    /* offset-x | offset-y | blur-radius | color */
    box-shadow: 3px 3px 4px 2px rgba(50, 50, 50, 1); 
@@ -93,7 +93,7 @@ main{
   }
   form > div > label,
   legend {
-      width: 100%;
+    width: 100%;
     float: left;
     padding-right: 10px;
   }
@@ -111,14 +111,15 @@ main{
 #manga,#l_read {
     width: 60%;
     background-color: rgba(234, 97, 83, 0.5);
-    line-height: 3rem;
-    font-size: 1.8rem;
+    line-height: 4.5vh;
+    font-size: 2.5vh;
     color: rgb(225, 225, 184);
     border: none;
     box-shadow: 3px 3px 4px 2px rgba(50, 50, 50, 1); 
     border-radius: 5px;
     margin-top: 10px;
     margin-bottom: 5px;
+    min-width: 10vw;
     transition: width 0.3s ease-in-out;
 }
 #manga:focus,#l_read:focus {
@@ -130,9 +131,9 @@ main{
     form > div {
       margin: 0 0 15px 0; 
     }
-    form > div > label,
-    legend {
-        width: 100%;
+    form > div > label{
+      font-size: 2vh;
+      width: 100%;
       float: none;
       margin: 0 0 5px 0;
     }
@@ -193,15 +194,16 @@ main{
     background-color: rgba(60, 54, 44, 0.5);
     border-radius: 10px;
     color: rgb(225, 225, 184);
-    height: 50%;
+    height: 75%;
     padding-bottom: 10%;
     }
   .imagen_form{
     height: 125%;
   }
+  
   .formulario {
-    height: 20vh;
-    font-size: 2rem;
+    height: 25vh;
+    font-size: 2vh;
   }
 }
 
