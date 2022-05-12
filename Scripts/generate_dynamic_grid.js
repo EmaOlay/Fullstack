@@ -16,6 +16,10 @@ axios.get(dir2)
                 data.push(response.data[index].name)
 
             }
+            //Ahora que tengo ambos vectores de strings los ordeno
+            data_cod.sort();
+            data.sort();
+            //console.log(data);
             for (let i = 0; i < data_cod.length; i++) {
 
                 chain += `<li class="img_grid_li"><img class="img_grid" src="https://raw.githubusercontent.com/EmaOlay/Fullstack/master/Images/covers/` + data_cod[i] + `" alt="` + data[i] + `"></li>`;
