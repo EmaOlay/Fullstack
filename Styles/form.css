@@ -109,9 +109,8 @@ input {
 			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
-	max-width: 100%;
-	min-height: 480px;
-	min-height: 60vh;
+	
+	min-height: 62vh;
 	font-size: 1.6rem;
 }
 
@@ -265,21 +264,6 @@ hago el cambio de opacidad y lo traigo al frente */
 }
 
 
-@media(max-width: 600px){
-	.container{
-		height: 50vh;
-	}
-	.social-container {
-		margin: 20px 0;
-		width: 200%;
-	}
-	h1{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		width: 100%;
-	}
-}
 
 @media(min-width: 2100px){
     .container{
@@ -312,5 +296,24 @@ hago el cambio de opacidad y lo traigo al frente */
 @media(max-aspect-ratio: 16/9){
     .container{
 		width:100%;
+	}
+}
+
+@media(max-aspect-ratio: 16/9) and (max-width: 600px){
+    main{
+		height: 70vh;
+	}
+	.container{
+		height: 60vh;
+	}
+	.social-container {
+		margin: 20px 0;
+		width: 200%;
+	}
+	h1{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
 	}
 }
