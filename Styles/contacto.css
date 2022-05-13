@@ -4,172 +4,84 @@
     box-sizing: border-box;
 }
 
+@keyframes hue_effect {
+  0% { filter:hue-rotate(0deg); }
+  20% { filter:hue-rotate(72deg); }
+  40% { filter:hue-rotate(144deg); }
+  60% { filter:hue-rotate(216deg); }
+  80% { filter:hue-rotate(288deg); }
+  100% { filter:hue-rotate(360deg); }
+}
 
+textarea {
+  resize: none;
+}
 
 .contenedor_form{
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-template-rows: repeat(2,1fr);
-  grid-template-areas: " img form"
-                        "iframe iframe";
-  justify-content: center;
-  align-content: center;
-  height: 60vh;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "form form iframe";
+  column-gap: 20px;
   width: 60vw;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  margin-left: 20%;
-  
+  height: 60vh;
+  margin: 0 20vw 0 20vw;
 }
-.contenedor-frase{
-  display: inline;
-}
-.formulario {
-  display: flex;
-  flex-direction: column;
-  grid-area: "form";
-  /* background-color: blueviolet; */
-  height: 100%;
-  padding-top: 2rem;
-}
-.imagen_form{
-  /* background-color: steelblue; */
-  grid-area: "img";
-}
+
 
 .caja-formulario{
-  margin-top: 5rem;
-  margin-left: -10rem;
-  margin-right: 5rem;
-  transform: scale(1.5);
-}
-.contenedor-iframe{
-    margin-top: 40px;
-    /* background-color: blue; */
-    grid-area: "iframe";
-    height: 25vh;
-    margin-bottom: -30px;
+  grid-area: form;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 2vh;
+  background-color: rgba(99, 90, 73,1);
+  border-radius: 5px;
 }
 
+#Field1,#Field2,#Field3,#Field4{
+  width: 60%;
+  background-color: rgba(234, 97, 83, 0.5);
+  line-height: 4.5vh;
+  font-size: 2.5vh;
+  color: rgb(225, 225, 184);
+  border: none;
+  box-shadow: 3px 3px 4px 2px rgba(50, 50, 50, 1); 
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  min-width: 10vw;
+  transition: width 0.3s ease-in-out;
+}
+
+#Field1:focus,#Field2:focus,#Field3:focus,#Field4:focus{
+  width: 100%;
+  border: 2px solid rgba(255, 146, 77, 1);
+  outline: none;
+}
+
+#saveForm{
+  font-family: 'Seagram';
+  color: rgb(225, 225, 184);
+  font-size: 2vh;
+  border-radius: 10px;
+  border: none;
+  margin: 5px 10px;
+  min-width: 10vw;
+  background-color: rgba(234, 97, 83, 0.5);
+  /* offset-x | offset-y | blur-radius | color */
+  box-shadow: 3px 3px 4px 2px rgba(50, 50, 50, 1);
+  animation: hue_effect 20s linear 0s infinite;
+}
+
+.contenedor-iframe{
+  grid-area: iframe;
+  height: 100%;
+}
 
 #alaska{
-    height: 100%;
-    width: 75%;
-}
-
-
-.imagen_form img{
+  width: 100%;
   height: 100%;
-  width: 80%;
 }
 
-.parrafo_random{
-  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 30% 75%, 10% 100%, 10% 75%, 0% 75%);
-  justify-content: center;
-    align-content: center;
-    background-color: rgba(99, 90, 73,0.5);
-    border-radius: 10px;
-    opacity: 1;
-    /* border: 1px solid steelblue; */
-    font-size: 2rem;
-    padding-top: 25px;
-    /* color: rgb(234, 97, 83); */
-    color: rgb(225, 225, 184);
-    height: 8rem;
-  }
-  form header h2 {
-    margin: 0 0 5px 0;
-  }
-  form > div {
-    clear: both;
-    overflow: hidden;
-    padding: 1px;
-    margin: 0 0 10px 0;
-  }
-  form > div > fieldset > div > div {
-    margin: 0 0 5px 0;
-  }
-  form > div > label,
-  legend {
-      width: 25%;
-    float: left;
-    padding-right: 10px;
-  }
-  form > div > div,
-  form > div > fieldset > div {
-    width: 75%;
-    float: right;
-  }
-  form > div > fieldset label {
-      font-size: 90%;
-  }
-  fieldset {
-      border: 0;
-    padding: 0;
-  }
-  
-  
-  input[type=text],
-  input[type=email],
-  input[type=url],
-  input[type=password],
-  textarea,
-  #Field106 {
-    width: 50%;
-    background-color: rgba(234, 97, 83, 0.5);
-    /* offset-x | offset-y | blur-radius | spread-radius | color */
-    /* box-shadow: 2px 2px 2px 1px rgba(255, 255, 255, 0.6); */
-    border: none;
-    border-radius: 5px;
-  }
-  input[type=text]:focus,
-  input[type=email]:focus,
-  input[type=url]:focus,
-  input[type=password]:focus,
-  textarea:focus,
-  #Field106:focus {
-    outline: 0;
-    /*border-color: #4697e4;*/
-    box-shadow: 0px 0px 2px 5px rgba(255, 255, 255, 0.6);
-    
-  }
-  
-  @media (max-width: 600px) {
-    form > div {
-      margin: 0 0 15px 0; 
-    }
-    form > div > label,
-    legend {
-        width: 100%;
-      float: none;
-      margin: 0 0 5px 0;
-    }
-    form > div > div,
-    form > div > fieldset > div {
-      width: 100%;
-      float: none;
-    }
-    input[type=text],
-    input[type=email],
-    input[type=url],
-    input[type=password],
-    textarea,
-    select {
-      width: 100%; 
-    }
-  }
-  @media (min-width: 1200px) {
-    form > div > label,
-      legend {
-        text-align: right;
-    }
-    input[type=text],
-    input[type=email],
-    input[type=url],
-    input[type=password],
-    textarea,
-    select {
-      width: 60%; 
-    }
-  }
