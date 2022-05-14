@@ -50,46 +50,19 @@
   <main>
 
     <div class="contenedor_form">
-      <div class="caja-formulario">
-        <div>
-          <label class="desc" id="title1" for="Field1">Full Name</label>
-          <div>
-            <input id="Field1" name="Field1" type="text">
-          </div>
-        </div>
-
-        <div>
-          <label class="desc" id="title3" for="Field3">
-            Email
-          </label>
-          <div>
-            <input id="Field3" name="Field3" type="email">
-          </div>
-        </div>
-
-        <div>
-          <label class="desc" id="title4" for="Field4">
-            Message
-          </label>
-
-          <div>
-            <textarea id="Field4" name="Field4" spellcheck="true"></textarea>
-          </div>
-        </div>
-
-        <div>
-          <div>
-            <input id="saveForm" name="saveForm" type="submit" value="Submit">
-          </div>
-        </div>
-      </div>
-      </form>
-
+    
+      
+        <form class="caja-formulario" action="https://formsubmit.co/0351fa300bd4cb84e3a7408be59acea0" method="POST">
+          <input type="hidden" name="_subject" value="Mail desde contacto!">
+          <input class="datos" type="text" name="name" required placeholder="Your Name...">
+          <input class="datos" type="email" name="email" required placeholder="Your Email...">
+          <input class="datos" type="text" name="message" required placeholder="Your Message...">
+          <button class="saveForm" type="submit">Send</button>
+        </form>
       <div class="contenedor-iframe">
         <iframe id="alaska"
-          src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d83909.57863265237!2d-158.950139467828!3d56.450928099031515!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x56faae2dea048a29%3A0x5257af83fe3b24c7!2sBlack%20Lake%2C%20Alaska%2C%20USA!3m2!1d56.456407!2d-158.9912369!5e0!3m2!1sen!2sar!4v1649953070873!5m2!1sen!2sar"
-          style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+         src="https://www.google.com/maps/embed?pb=!1m22!1m8!1m3!1d141023.92349121047!2d-158.984472!3d56.476395!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m3!3m2!1d56.4593262!2d-158.9903084!4m5!1s0x56c8e0eb8106080f%3A0x9deec3b417cbcedd!2sBlack%20Lake%2C%20Lakes%2C%20AK%2099654%2C%20USA!3m2!1d61.5713212!2d-149.338707!5e0!3m2!1sen!2sar!4v1652482765348!5m2!1sen!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
     
@@ -113,6 +86,8 @@
     <p class="firma">Autor: Olay Emanuel</p>
   </footer>
 
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="../Scripts/contacto.js"></script>
   <script src="../Scripts/cursor_script.js"></script>
   <script src="../Scripts/scrollbar_script.js"></script>
   <script src="../Scripts/nav_snap.js"></script>

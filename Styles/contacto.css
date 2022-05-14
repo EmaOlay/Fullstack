@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/*
 @keyframes hue_effect {
   0% { filter:hue-rotate(0deg); }
   20% { filter:hue-rotate(72deg); }
@@ -11,7 +11,7 @@
   60% { filter:hue-rotate(216deg); }
   80% { filter:hue-rotate(288deg); }
   100% { filter:hue-rotate(360deg); }
-}
+}*/
 
 textarea {
   resize: none;
@@ -34,13 +34,14 @@ textarea {
   height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
   font-size: 2vh;
   background-color: rgba(99, 90, 73,1);
   border-radius: 5px;
 }
 
-#Field1,#Field2,#Field3,#Field4{
+.datos{
   width: 60%;
   background-color: rgba(234, 97, 83, 0.5);
   line-height: 4.5vh;
@@ -53,15 +54,20 @@ textarea {
   margin-bottom: 5px;
   min-width: 10vw;
   transition: width 0.3s ease-in-out;
+  display: block;
 }
 
-#Field1:focus,#Field2:focus,#Field3:focus,#Field4:focus{
-  width: 100%;
+.datos::placeholder{
+  color: rgb(225, 225, 184);
+}
+
+.datos:focus{
+  width: 80%;
   border: 2px solid rgba(255, 146, 77, 1);
   outline: none;
 }
 
-#saveForm{
+.saveForm{
   font-family: 'Seagram';
   color: rgb(225, 225, 184);
   font-size: 2vh;
@@ -72,7 +78,6 @@ textarea {
   background-color: rgba(234, 97, 83, 0.5);
   /* offset-x | offset-y | blur-radius | color */
   box-shadow: 3px 3px 4px 2px rgba(50, 50, 50, 1);
-  animation: hue_effect 20s linear 0s infinite;
 }
 
 .contenedor-iframe{
@@ -81,6 +86,8 @@ textarea {
 }
 
 #alaska{
+  border: none;
+  border-radius: 5px;
   width: 100%;
   height: 100%;
 }
