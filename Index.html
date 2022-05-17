@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,17 +19,18 @@
     <!-- To use fontawesome -->
     <script src="https://kit.fontawesome.com/657d94f99b.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div id="custom_cursor"></div>
     <div id="cursor"></div>
     <div id="progressbar"></div>
     <div id="scroll_path"></div>
-    <video id="videoBG" poster="./Images/bg_image.jpg" autoplay="" muted="" loop="" >
+    <video id="videoBG" poster="./Images/bg_image.jpg" autoplay="" muted="" loop="">
         <source src="./Videos/bg_video.webm" type="video/webm">
     </video>
-    <h1>Anime List</h1>
+
     <header>
-        
+        <h1>Anime List</h1>
         <input type="checkbox" id="active">
         <label for="active" class="menu-btn"><span></span></label>
         <label for="active" class="close"></label>
@@ -41,26 +43,41 @@
                 <li><a href="./Pages/table.html"><i class="fa-solid fa-table-list"></i>Table</a></li>
             </ul>
         </div>
-            
+
     </header>
 
     <main>
+        
+        <div id="m-counter" class="statistics" :key="Fetched">
+           
+            <span v-if="Fetched">Manga being displayed:{{counter}}</span>
+            
+        </div>
+        <div id="ch-counter" class="statistics">
+            Total chapters read:
+        </div>
+
         <ul class="img_grid_ul">
             <!-- Aca van las imagenes se genera dinamicamente!!!! -->
         </ul>
-        
+
     </main>
-    
+
     <footer>
         <nav class="footer_nav">
-            <a rel="noreferrer noopener" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-square"></i></a>
-            <a rel="noreferrer noopener" href="https://github.com/EmaOlay" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a rel="noreferrer noopener" href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a rel="noreferrer noopener" href="https://www.linkedin.com/in/emanuel-olay-0069b91b7/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="mailto:olayemanuel@gmail.com?subject=Prueba&body=Esto es una prueba"><i class="fa-solid fa-at"></i></a>
+            <a rel="noreferrer noopener" href="https://www.facebook.com/" target="_blank"><i
+                    class="fa-brands fa-facebook-square"></i></a>
+            <a rel="noreferrer noopener" href="https://github.com/EmaOlay" target="_blank"><i
+                    class="fa-brands fa-github"></i></a>
+            <a rel="noreferrer noopener" href="https://www.instagram.com/" target="_blank"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a rel="noreferrer noopener" href="https://www.linkedin.com/in/emanuel-olay-0069b91b7/" target="_blank"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:olayemanuel@gmail.com?subject=Prueba&body=Esto es una prueba"><i
+                    class="fa-solid fa-at"></i></a>
             <div class="animation start-home"></div>
         </nav>
-        
+
         <p class="firma">Autor: Olay Emanuel</p>
     </footer>
 
@@ -68,22 +85,27 @@
         <svg viewBox="0 0 1 1">
             <defs>
                 <clipPath clipPathUnits="objectBoundingBox" id="bordermask_full">
-              <path class="cls-1" d="M1,.5A5.9,5.9,0,0,1,.5,1,4.72,4.72,0,0,1,0,.5,5.9,5.9,0,0,1,.5,0S1,.48,1,.5Z"/>
+                    <path class="cls-1"
+                        d="M1,.5A5.9,5.9,0,0,1,.5,1,4.72,4.72,0,0,1,0,.5,5.9,5.9,0,0,1,.5,0S1,.48,1,.5Z" />
             </defs>
         </svg>
         <svg viewBox="0 0 1 0.5">
             <defs>
                 <clipPath clipPathUnits="objectBoundingBox" id="bordermask_lower">
-                <path class="cls-1" d="M480.54,460.5a5.9,5.9,0,0,1-.5.5,4.72,4.72,0,0,1-.5-.5" transform="translate(-479.54 -460.0)"/>
+                    <path class="cls-1" d="M480.54,460.5a5.9,5.9,0,0,1-.5.5,4.72,4.72,0,0,1-.5-.5"
+                        transform="translate(-479.54 -460.0)" />
             </defs>
         </svg>
     </div>
     <!-- Axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue@3"></script>
     <!-- Propios -->
     <script src="./Scripts/cursor_script.js"></script>
     <script src="./Scripts/scrollbar_script.js"></script>
     <script src="./Scripts/nav_snap.js"></script>
     <script src="./Scripts/generate_dynamic_grid.js"></script>
 </body>
+
 </html>
