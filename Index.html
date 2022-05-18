@@ -48,16 +48,16 @@
 
     <main>
         
-        <div id="m-counter" class="statistics" :key="Fetched">
+        <div id="m-counter" class="statistics">
            
-            <span v-if="Fetched">Manga being displayed:{{counter}}</span>
-            
+            <span v-if="counter!=-1">Manga being displayed:{{counter}}</span>
+            <span v-if="total_read!=-1">Total chapters read:{{}}</span>
         </div>
         <div id="ch-counter" class="statistics">
-            Total chapters read:
+            
         </div>
 
-        <ul class="img_grid_ul">
+        <ul class="img_grid_ul" id="img_grid_ul">
             <!-- Aca van las imagenes se genera dinamicamente!!!! -->
         </ul>
 
@@ -98,14 +98,16 @@
         </svg>
     </div>
     <!-- Axios -->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
     <!-- Vue -->
     <script src="https://unpkg.com/vue@3"></script>
+    <!-- Vuex -->
+    <!-- <script src="https://unpkg.com/vuex@4.0.0/dist/vuex.global.js"></script> -->
     <!-- Propios -->
+    <script src="./Scripts/generate_dynamic_grid.js"></script>
     <script src="./Scripts/cursor_script.js"></script>
     <script src="./Scripts/scrollbar_script.js"></script>
     <script src="./Scripts/nav_snap.js"></script>
-    <script src="./Scripts/generate_dynamic_grid.js"></script>
 </body>
 
 </html>
