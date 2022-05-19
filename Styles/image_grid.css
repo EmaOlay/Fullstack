@@ -1,7 +1,5 @@
 :root {
   --columns: 3;
-  /* --yellow: rgba(234, 97, 83,0.95);
-  --pink: rgba(248, 255, 229, 1); */
   --red: rgba(234, 97, 83, 1);
   --violet: rgba(95, 57, 118, 1);
   --white: rgba(248, 255, 229, 1);
@@ -9,6 +7,14 @@
 }
 /*violeta-blanco
 rojo-blanco*/
+
+.statistics{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 0px 20px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
 
 .img_grid{
   box-shadow: 12px -12px 20px -8px #000;
