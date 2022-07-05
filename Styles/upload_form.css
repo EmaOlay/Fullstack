@@ -73,7 +73,7 @@ main{
   top: -40%;
   }
   
-#saveForm{
+#saveForm,#DeleteForm{
   font-family: 'Seagram';
   color: rgb(225, 225, 184);
   font-size: 2vh;

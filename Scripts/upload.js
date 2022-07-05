@@ -104,9 +104,22 @@ class library {
 const saveForm = document.getElementById("saveForm");
 
 saveForm.addEventListener('click', (e) => {
+    let aux =checkInputs()
+    if(aux!= -2){
+        if (aux == 1){
+            envio_manga_new(Libreria.getMangaInfo(manga.value).to_JSON());
+        }else{
+            envio_manga_update(Libreria.getMangaInfo(manga.value).to_JSON());
+        }
+        
+    }
+})
+
+const DeleteForm = document.getElementById("DeleteForm");
+
+DeleteForm.addEventListener('click', (e) => {
     if(checkInputs()!= -2){
-        console.log(Libreria.getMangaInfo(manga.value).to_JSON());
-        envio_manga(Libreria.getMangaInfo(manga.value).to_JSON());
+        envio_manga_update_delete(Libreria.getMangaInfo(manga.value).to_JSON());
     }
 })
 
@@ -132,15 +145,24 @@ axios.get(dir2)
             }
             for (let i = 0; i < response.data.length; i++) {
                 var option = document.createElement("option");
-                option.text = vec_title[i];
+                let datalist = document.getElementById("mi_datalist");
+                //option.text = vec_title[i];
                 option.value = vec_title[i];
-                manga.add(option);
+                datalist.appendChild(option);
             }
-            console.log(Libreria);
         }
     )
-
-function envio_manga(json) {
+function envio_manga_new(json) {
+        let dir5 = "http://127.0.0.1:5000/api/mangas/add"
+        axios.post(dir5, json)
+        .then(function (response) {
+            console.log(response);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+}
+function envio_manga_update(json) {
     let dir3 = "http://127.0.0.1:5000/api/mangas/update"
     axios.post(dir3, json)
     .then(function (response) {
@@ -150,7 +172,16 @@ function envio_manga(json) {
         console.log(error);
     });
 }
-
+function envio_manga_update_delete(json) {
+    let dir4 = "http://127.0.0.1:5000/api/mangas/delete"
+    axios.post(dir4, json)
+    .then(function (response) {
+        console.log(response);
+    })
+    .catch(function (error) {
+        console.log(error);
+    });
+}
 
 const manga = document.getElementById("manga");
 const l_read = document.getElementById("l_read");
@@ -161,14 +192,15 @@ function checkInputs() {
 
     /*Pregunto si quiere borrar*/
     if (l_readValue == -1) {
-        Libreria.deleteManga(mangaValue);
+        //Libreria.deleteManga(mangaValue);
     } else {
         //Si no quiso borrar update
         if (Libreria.updateManga(mangaValue, l_readValue) == -1) {
             console.log('Creo un nuevo Manga');
             Libreria.newManga(mangaValue, l_readValue);
-        }
-
+            return 1;
+        } else { return -1; }
+        return -2;
     }
 }
 
