@@ -2,7 +2,7 @@
 let chain = "";
 
 //let dir2 = "https://api.github.com/repos/EmaOlay/Fullstack/contents/Images/covers";
-let dir2 = "http://127.0.0.1:5000/api/mangas/"
+let dir2 = "https://testheroku-ema.herokuapp.com/api/mangas/"
 //let data_cod = []
 let data = []
 let nombre=[]
