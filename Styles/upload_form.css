@@ -28,7 +28,7 @@ main{
   justify-content: center;
   align-items: center;
   margin-left: 20%;
-  padding-top: 15vh;
+  padding-top: 10vh;
 }
 
 
@@ -41,7 +41,7 @@ main{
   font-size: 2rem;
   background-color: rgba(99, 90, 73,1);
   border-radius: 5px;
-  height: 35vh;
+  height: 40vh;
 }
 
 .imagen_form{
