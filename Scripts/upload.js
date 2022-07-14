@@ -107,6 +107,7 @@ saveForm.addEventListener('click', (e) => {
     let aux =checkInputs()
     if(aux!= -2){
         if (aux == 1){
+            console.log('Entre a enviar new')
             envio_manga_new(Libreria.getMangaInfo(manga.value).to_JSON());
         }else{
             envio_manga_update(Libreria.getMangaInfo(manga.value).to_JSON());
@@ -125,7 +126,7 @@ DeleteForm.addEventListener('click', (e) => {
 
 /*declaro las variables y las funciones para la implementacion */
 //let dir2 = "https://api.github.com/repos/EmaOlay/Fullstack/contents/Images/covers";
-let dir2 = "http://127.0.0.1:5000/api/mangas/"
+let dir2 = "https://testheroku-ema.herokuapp.com/api/mangas/"
 let vec_title = [];
 let vec_l_read = [];
 let vec_id=[];
@@ -153,7 +154,7 @@ axios.get(dir2)
         }
     )
 function envio_manga_new(json) {
-        let dir5 = "http://127.0.0.1:5000/api/mangas/add"
+        let dir5 = "https://testheroku-ema.herokuapp.com/api/mangas/add"
         axios.post(dir5, json)
         .then(function (response) {
             console.log(response);
@@ -163,7 +164,7 @@ function envio_manga_new(json) {
         });
 }
 function envio_manga_update(json) {
-    let dir3 = "http://127.0.0.1:5000/api/mangas/update"
+    let dir3 = "https://testheroku-ema.herokuapp.com/api/mangas/update"
     axios.post(dir3, json)
     .then(function (response) {
         console.log(response);
@@ -173,7 +174,7 @@ function envio_manga_update(json) {
     });
 }
 function envio_manga_update_delete(json) {
-    let dir4 = "http://127.0.0.1:5000/api/mangas/delete"
+    let dir4 = "https://testheroku-ema.herokuapp.com/api/mangas/delete"
     axios.post(dir4, json)
     .then(function (response) {
         console.log(response);
