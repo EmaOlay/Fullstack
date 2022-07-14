@@ -8,6 +8,7 @@ let data = []
 let nombre=[]
 let l_read = []
 let log_date = []
+let url = []
 axios.get(dir2)
     .then(
         response => {
@@ -22,15 +23,14 @@ axios.get(dir2)
                 //console.log(response.data[index].last_read);
                 log_date.push(response.data[index].log_date);
                 //console.log(response.data[index].log_date);
-
+                url.push(response.data[index].url);
+                //console.log(response.data[index].url);
             }
             /*
             for (let i = 0; i < response.data.length; i++){
-                
                 console.log(nombre[i]);
                 console.log(l_read[i]);
                 console.log(log_date[i]);
-                
             }
             */
             //console.log(data);
@@ -44,7 +44,7 @@ axios.get(dir2)
                     `+l_read[i]+`
                 </div>
                 <div class="cell" data-title="URL">
-                    <a href="#">Algun Sitio</a>
+                    <a href="#">`+url[i]+`</a>
                 </div>
                 <div class="cell" data-title="Log Date">
                     `+log_date[i]+`
