@@ -176,7 +176,7 @@ function envio_manga_new(json) {
 }
 function envio_manga_update(json) {
     let dir3 = "https://testheroku-ema.herokuapp.com/api/mangas/update"
-    console.log(json);
+    //console.log(json);
     axios.post(dir3, json)
     .then(function (response) {
         console.log(response);
