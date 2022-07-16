@@ -166,7 +166,7 @@ axios.get(dir2)
     )
 function envio_manga_new(json) {
         let dir5 = "https://testheroku-ema.herokuapp.com/api/mangas/add"
-        console.log(json);
+        //console.log(json);
         axios.post(dir5, json)
         .then(function (response) {
             console.log(response);
